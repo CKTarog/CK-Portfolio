@@ -43,8 +43,8 @@ const Navbar = ({children}) => {
             <div className={`space-x-2 text-sm md:text-lg *:rounded-full *:transition *:duration-200 *:ease-in *:md:px-2
             *:md:text-[#270E12]/50 *:text-[#270E12] *:md:hover:text-[#270E12] *:drop-shadow-sm *:md:hover:drop-shadow-[#733a3d]/30
             *:md:dark:text-[#fff1dc]/30 *:dark:text-[#fff1dc] *:md:dark:hover:text-[#fff1dc] *:dark:hover:drop-shadow-[#fff1dc]/30 md:visible ${showNav ? "*:visible" : "*:hidden"}`}>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
+                <a href="skills">Skills</a>
+                <a href="projects">Projects</a>
                 <Link to="/about">About Me</Link>
             </div>
                 <button onClick={() => setNav((prev) => !prev)} 
