@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.swiper {
+  --swiper-pagination-color: #733a3d;
+  --swiper-pagination-bullet-inactive-color: #635147;
+  --swiper-pagination-bullet-inactive-opacity: 0.4;
+}
+.dark .swiper {
+  --swiper-pagination-color: #fff1dc;
+  --swiper-pagination-bullet-inactive-color: #d2b48c;
+}
