@@ -5,7 +5,7 @@ import { Desc, Skills, Projects, ContactPage, AboutMe} from './Components';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/CK-Portfolio">
       <Theme>
           <Routes>
             <Route element={<NavbarOutlet />}>
