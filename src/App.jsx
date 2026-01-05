@@ -1,11 +1,12 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { NavbarOutlet, Theme} from './Components';
 import { Desc, Skills, Projects, ContactPage, AboutMe} from './Components';
+import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter basename="/CK-Portfolio">
+    <HashRouter>
       <Theme>
           <Routes>
             <Route element={<NavbarOutlet />}>
@@ -20,7 +21,7 @@ function App() {
             <Route path="/about" element={<AboutMe />} />
           </Routes>
       </Theme>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
