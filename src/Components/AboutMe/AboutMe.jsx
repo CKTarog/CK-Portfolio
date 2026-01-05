@@ -18,7 +18,7 @@ const AboutMe = () => {
         <Others/>
         <section className="absolute inset-0 overflow-hidden">
             <div className="absolute bottom-0 right-0 translate-x-12 translate-y-7">
-                <div className=" mask-no-repeat  mask-contain mask-[url(./mask-30.svg)]">
+                <div className=" mask-no-repeat  mask-contain mask-[url(/mask-30.svg)]">
                     <img className="w-65 h-50 rounded-2xl drop-shadow-lg dark:opacity-20 opacity-40" src="./rockzami.png"/>
                 </div>
             </div>

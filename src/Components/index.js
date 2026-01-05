@@ -5,7 +5,6 @@ export { default as MouseTrail } from './General/MouseTrail';
 
 export { default as NavbarOutlet } from './Navbar';
 export { default as Theme } from './ThemeToggle';
-export { default as Contents } from './testcontnets';
 export { default as Desc} from './Intro/MySummary';
 export { default as Profile } from './Intro/Profilepic';
 

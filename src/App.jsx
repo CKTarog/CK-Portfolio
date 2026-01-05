@@ -12,10 +12,10 @@ function App() {
             <Route element={<NavbarOutlet />}>
               <Route path="/" element={
                   <div className="snap-always overflow-scroll snap-mandatory snap-y h-dvh no-scrollbar m-0 p-0">
-                    <Desc />
-                    <Skills />
-                    <Projects />
-                    <ContactPage />
+                    <Desc id="desc" />
+                    <Skills id="skills" />
+                    <Projects id="projects" />
+                    <ContactPage id="contact" />
                   </div>}/>
             </Route>
             <Route path="/about" element={<AboutMe />} />

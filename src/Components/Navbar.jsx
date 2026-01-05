@@ -1,6 +1,6 @@
 import { MdKeyboardArrowLeft , MdKeyboardArrowRight  } from "react-icons/md";
 import { useState, useEffect } from 'react';
-import { Link,Outlet } from "react-router-dom";
+import { Link,Outlet,useLocation  } from "react-router-dom";
 
 const NavbarOutlet = () => {
     return(
@@ -12,6 +12,7 @@ const NavbarOutlet = () => {
 }
 const Navbar = ({children}) => {
     const [showNav, setNav] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
     const checkWidth = () => {
@@ -24,12 +25,26 @@ const Navbar = ({children}) => {
 
     checkWidth();
 
-
     window.addEventListener("resize", checkWidth);
     return () => window.removeEventListener("resize", checkWidth);
     }, []);
 
     if (showNav === null) return null;
+
+    const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    // If we are on a different page (e.g., /about), first go back to home
+    if (location.pathname !== "/") {
+      window.location.hash = "#/"; // go to main page
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 50); // wait a tiny bit for the page to render
+    } else {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    };
 
     return (
         <>
@@ -43,8 +58,8 @@ const Navbar = ({children}) => {
             <div className={`space-x-2 text-sm md:text-lg *:rounded-full *:transition *:duration-200 *:ease-in *:md:px-2
             *:md:text-[#270E12]/50 *:text-[#270E12] *:md:hover:text-[#270E12] *:drop-shadow-sm *:md:hover:drop-shadow-[#733a3d]/30
             *:md:dark:text-[#fff1dc]/30 *:dark:text-[#fff1dc] *:md:dark:hover:text-[#fff1dc] *:dark:hover:drop-shadow-[#fff1dc]/30 md:visible ${showNav ? "*:visible" : "*:hidden"}`}>
-                <a href="skills">Skills</a>
-                <a href="projects">Projects</a>
+                <button onClick={() => scrollToSection("skills")}>Skills</button>
+                <button onClick={() => scrollToSection("projects")}>Projects</button>
                 <Link to="/about">About Me</Link>
             </div>
                 <button onClick={() => setNav((prev) => !prev)} 
