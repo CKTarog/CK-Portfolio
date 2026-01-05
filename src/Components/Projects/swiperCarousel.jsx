@@ -1,5 +1,6 @@
+//using swiper for projects carousel
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Mousewheel, Pagination, Scrollbar, FreeMode } from "swiper/modules";
+import { EffectCoverflow, Mousewheel, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import 'swiper/css/pagination';
@@ -32,7 +33,8 @@ const ProjectCarousel = ({currentProject, activeProject, setActiveProject, getID
 
           </Swiper>
           </div>
-
+      
+      {/*a modal showcasing more details of selected project*/}
       {activeProject && (
         <section className='fixed inset-0 z-50 backdrop-blur-3xl dark:text-[#fff1dc] text-[#270E12]'>
           <div className="h-dvh flex lg:flex-row flex-col align-middle">

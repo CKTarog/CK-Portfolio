@@ -1,19 +1,20 @@
 import { MdKeyboardArrowLeft , MdKeyboardArrowRight  } from "react-icons/md";
 import { useState, useEffect } from 'react';
-import { Link,Outlet,useLocation  } from "react-router-dom";
+import { Link,Outlet  } from "react-router-dom";
 
-const NavbarOutlet = () => {
+const NavbarOutlet = ({scrollToSection}) => {
     return(
         <>
-        <Navbar/>
+        <Navbar scrollToSection={scrollToSection}/>
         <Outlet/>
         </>
     );  
 }
-const Navbar = ({children}) => {
+const Navbar = ({children, scrollToSection}) => {
+    //manipulates the toggle nav button shown on small screens
     const [showNav, setNav] = useState(false);
-    const location = useLocation();
 
+    //some sizes arent considered 'sm' but will make the buttons cramped, to avoid that im manually disabling the nav on a certain size
     useEffect(() => {
     const checkWidth = () => {
       if (window.innerWidth > 768) {
@@ -31,29 +32,14 @@ const Navbar = ({children}) => {
 
     if (showNav === null) return null;
 
-    const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (!element) return;
-
-    // If we are on a different page (e.g., /about), first go back to home
-    if (location.pathname !== "/") {
-      window.location.hash = "#/"; // go to main page
-      setTimeout(() => {
-        element.scrollIntoView({ behavior: "smooth" });
-      }, 50); // wait a tiny bit for the page to render
-    } else {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-    };
-
     return (
         <>
         <nav className="flex justify-between bg-transparent items-center p-2 font-size-sm sticky top-0 left-0 right-0 backdrop-blur-sm z-10">
-            <a href="#contact" className="rounded-full p-1 md:px-4 px-2 font-bold lg:text-lg text-sm bg-linear-to-r transition duration-300 ease-in-out cursor-pointer hover:scale-110 focus:outline-offset-3
+            <button onClick={() => scrollToSection("contact")} className="rounded-full p-1 md:px-4 px-2 font-bold lg:text-lg text-sm bg-linear-to-r transition duration-300 ease-in-out cursor-pointer hover:scale-110 focus:outline-offset-3
             from-[#d2b48c] to-[#fff1dc] text-black/70 hover:text-white hover:from-[#270E12] hover:to-[#733a3d]
             dark:from-[#270E12] dark:to-[#733a3d] dark:text-white/70 dark:hover:text-[#270E12] dark:hover:from-[#635147] dark:hover:to-[#d2b48c]">
                 Contact Me
-            </a>
+            </button>
             <div className="flex space-x-2 items-center">
             <div className={`space-x-2 text-sm md:text-lg *:rounded-full *:transition *:duration-200 *:ease-in *:md:px-2
             *:md:text-[#270E12]/50 *:text-[#270E12] *:md:hover:text-[#270E12] *:drop-shadow-sm *:md:hover:drop-shadow-[#733a3d]/30

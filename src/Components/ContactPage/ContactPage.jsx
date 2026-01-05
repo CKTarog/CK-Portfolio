@@ -3,7 +3,9 @@ import SendMessage from './SendMessage';
 import { useState, useEffect } from 'react';
 
 const ContactPage = () => {
-    const [showForm, setForm] = useState(false);
+    const [showForm, setForm] = useState(false); //manipulates if the form section is visible or not
+
+    //manual hide form when specific size
     useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {

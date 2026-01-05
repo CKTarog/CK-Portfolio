@@ -1,3 +1,4 @@
+//ripple hover effect
 const RippleHover = ({children}) => {
     return(
         <div className='relative shrink-0  overflow-hidden font-light justify-center text-center group border-2 group dark:border-[#d2b48c] border-[#733a3d] sm:w-25 w-18 lg:h-120 sm:h-100 h-80 rounded-2xl duration-400 ease-in-out hover:scale-105'>

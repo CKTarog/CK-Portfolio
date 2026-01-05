@@ -1,6 +1,7 @@
 import RippleHover from './HoverEffect';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
+//Showcase skills with Ripple Hover effect
 const Skills = () => {
     return(
         <div className='snap-center dark:text-[#fff1dc] text-[#270E12] text-center space-y-4 min-h-dvh select-none place-content-center py-13' id='skills'>
@@ -29,6 +30,8 @@ const Skills = () => {
           </RippleHover>
           
         </div>
+
+        {/*scroll guide when on medium screens and below*/}
         <p className='md:hidden visible tracking-[0.3em] animate-pulse '> scroll <MdKeyboardDoubleArrowRight className='inline'/></p>
       </div>
     );

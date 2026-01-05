@@ -13,6 +13,7 @@
   }
 }
 
+/*to decorate the swiper pagination element*/
 .swiper {
   --swiper-pagination-color: #733a3d;
   --swiper-pagination-bullet-inactive-color: #635147;

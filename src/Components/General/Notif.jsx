@@ -1,3 +1,5 @@
+//Notif component manipulated by useState
+//show this component with given text after an action
 const Notif = ({children}) => {
     return(
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">

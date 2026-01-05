@@ -5,11 +5,12 @@ import { useState } from 'react';
 import Notif from '../General/Notif';
 
 const Grid = ({ setForm, showForm }) => {
-    const [showNotif, setNotif] = useState(false);
+    const [showNotif, setNotif] = useState(false); //manipulates if notif is shown or not
 
+    //copy to clipboard function
     const handleCopy = () => {
-    navigator.clipboard.writeText("cftarog@student.apc.edu.ph")
-      .then(() => {
+    navigator.clipboard.writeText("cftarog@student.apc.edu.ph") //will copy this to clipboard
+      .then(() => { //then will show notif that it was copied, hidden after some time
         setNotif(true);
         setTimeout(() => setNotif(false), 1500);
       })
@@ -49,7 +50,8 @@ const Grid = ({ setForm, showForm }) => {
                 <img src="./contact_img4.jpg" className='w-full h-full object-cover' />
             </div>
 
-            <button onClick={() => setForm(true)} disabled={false} className="row-start-9 col-span-3 @lg:text-2xl @md:text-lg font-black uppercase cursor-pointer shadow-md shadow-[#d2b48c]/20 dark:shadow-[#733a3d]/20 hover:scale-110 duration-200 lg:shadow-none lg:hover:scale-none lg:animate-none animate-pulse dark:lg:hover:text-[#d2b48c] lg:cursor-not-allowed lg:pointer-events-none lg:hover:text-[#733a3d] transition-transform">Say Hello!</button>
+            {/*Button to show form, will not work nor have hover effects on large screens*/}
+            <button onClick={() => setForm(true)} disabled={false} className="row-start-9 col-span-3 @lg:text-2xl @md:text-lg font-black uppercase cursor-pointer shadow-md shadow-[#d2b48c]/20 dark:shadow-[#733a3d]/20 hover:scale-110 duration-200 lg:shadow-none lg:hover:scale-none lg:animate-none animate-pulse dark:lg:hover:text-[#d2b48c] lg:pointer-events-none lg:hover:text-[#733a3d] transition-transform">Say Hello!</button>
         </div>
         
     );

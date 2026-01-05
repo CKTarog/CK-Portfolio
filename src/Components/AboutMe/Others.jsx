@@ -1,6 +1,7 @@
 const Others = () => {
     return(
         <>
+        {/*Hobies and Interests Part*/}
         <article className="p-6 dark:text-[#d2b48c] text-[#733a3d] lg:px-20">
             <div className="grid grid-col-2 pl-4 transition-all lg:pl-10">
             <div>
@@ -26,6 +27,8 @@ const Others = () => {
             </div>
             </div>
         </article>
+
+        {/*Work As Artist Part*/}
         <article className="p-6 dark:text-[#d2b48c] text-[#733a3d] lg:px-20">
             <h1 className="text-4xl font-black uppercase transition-all lg:text-6xl ">As Freelance Artist</h1>
             <p className="font-semibold lg:text-normal text-sm text-[#270E12]/60 dark:text-[#d2b48c]/60">I draw when I want to, feel like it, and enjoy it.</p>

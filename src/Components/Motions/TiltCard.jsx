@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+//this component is taken from framer-motion site and adjusted
+import { useRef } from "react";
 import {motion,useMotionTemplate, useMotionValue,useSpring} from "framer-motion";
 
 const ROTATION_RANGE = 32.5;

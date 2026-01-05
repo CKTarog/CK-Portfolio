@@ -1,4 +1,4 @@
-import React from "react";
+//this component is taken from framer-motion site and adjusted
 import { motion } from "framer-motion";
 
 const RevealLinks = ({children, link}) => {

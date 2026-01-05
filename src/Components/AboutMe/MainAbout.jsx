@@ -1,6 +1,8 @@
 const MainAbout = () => {
     return(
         <>
+
+        {/*Education Part*/}
         <article className="p-6 dark:text-[#d2b48c] text-[#733a3d] lg:px-20">
             <h1 className="text-4xl font-black uppercase transition-all lg:text-6xl">Education</h1>
             <div className="flex flex-col items-start space-y-5 lg:flex-row">
@@ -27,6 +29,8 @@ const MainAbout = () => {
             </section>
             </div>
         </article>
+
+        {/*Experiences Part*/}
         <article className="p-6 dark:text-[#d2b48c] text-[#733a3d] lg:px-20">
             <h1 className="text-4xl font-black uppercase transition-all lg:text-6xl">Experiences</h1>
             <div className="flex flex-col items-start space-y-5 lg:flex-row">
@@ -58,6 +62,8 @@ const MainAbout = () => {
             </section>
             </div>
         </article>
+
+        {/*Certificates Part*/}
         <article className="p-6 dark:text-[#d2b48c] text-[#733a3d] lg:px-20">
             <h1 className="text-4xl font-black uppercase transition-all lg:text-6xl">Certificates</h1>
             <section className="pl-4 transition-all lg:pl-10">
