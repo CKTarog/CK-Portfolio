@@ -6,8 +6,6 @@ const Breadcrumbs = () => {
         <p> Low-code </p>
         <p> Cisco </p>
         <p> RDBMS </p>
-        <p> Scrum </p>
-        <p> Agile </p>
         </div>
     );
 }
