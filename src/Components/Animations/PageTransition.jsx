@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom"
 
 //page fade in transition using gsap
 const PageTransition = ({ children }) => {
-  const containerRef = useRef(null)
+  const containerRef = useRef(null) //gets the page to transition
   const location = useLocation()
 
   useEffect(() => {

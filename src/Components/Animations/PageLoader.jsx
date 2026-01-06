@@ -3,11 +3,12 @@ import { useEffect, useState, useRef } from "react"
 import { gsap } from "gsap"
 
 const PageLoader = ({onFinish }) => {
-  const wrapperRef = useRef(null)
+  const wrapperRef = useRef(null) //gets the loader boxes
   const [visible, setVisible] = useState(true) //manipulate if this loader is visible or not
 
   useEffect(() => {
     const timer = setTimeout(() => {
+        {/*fade out if done*/}
       gsap.to(wrapperRef.current, {
         opacity: 0,
         duration: 1.0,
