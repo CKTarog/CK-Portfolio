@@ -4,9 +4,9 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 //skills with Ripple Hover effect
 const Skills = () => {
     return(
-        <div className='snap-center dark:text-[#fff1dc] text-[#270E12] text-center space-y-4 min-h-dvh select-none place-content-center py-13' id='skills'>
+        <section className='snap-center dark:text-[#fff1dc] text-[#270E12] text-center space-y-4 min-h-dvh select-none place-content-center py-13' id='skills'>
           <h1 className=' p-4 lg:text-8xl font-bold text-6xl'>Skills</h1>
-        <div className='p-4 flex flex-row items-center space-x-3 md:justify-center md:overflow-visible justify-start overflow-x-auto no-scrollbar'>
+        <div className='p-4 flex flex-row items-center space-x-3 lg:justify-center lg:overflow-visible justify-start overflow-x-auto no-scrollbar'>
           <RippleHover>
             HTML5
           </RippleHover>
@@ -20,6 +20,9 @@ const Skills = () => {
             BOOTSTRAP5
           </RippleHover>
           <RippleHover>
+            REACTJS
+          </RippleHover>
+          <RippleHover>
             TAILWIND
           </RippleHover>
           <RippleHover>
@@ -28,11 +31,17 @@ const Skills = () => {
           <RippleHover>
             JAVA
           </RippleHover>
+          <RippleHover>
+            CISCO
+          </RippleHover>
+          <RippleHover>
+            MYSQL
+          </RippleHover>
         </div>
 
         {/*scroll guide when on medium screens and below*/}
-        <p className='md:hidden visible tracking-[0.3em] animate-pulse '> scroll <MdKeyboardDoubleArrowRight className='inline'/></p>
-      </div>
+        <p className='lg:hidden visible tracking-[0.3em] animate-pulse '> scroll <MdKeyboardDoubleArrowRight className='inline'/></p>
+      </section>
     );
 }
 

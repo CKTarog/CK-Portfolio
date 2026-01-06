@@ -2,39 +2,25 @@
 import { useEffect, useState, useRef } from "react"
 import { gsap } from "gsap"
 
-const PageLoader = () => {
+const PageLoader = ({onFinish }) => {
   const wrapperRef = useRef(null)
   const [visible, setVisible] = useState(true) //manipulate if this loader is visible or not
 
-  //gets information of the images
   useEffect(() => {
-    const images = document.images
-    const total = images.length
-    let loaded = 0
-
-    if (total === 0) finishLoading()
-
-    const onLoad = () => {
-      loaded++
-      if (loaded === total) finishLoading()
-    }
-
-    for (let img of images) {
-      if (img.complete) onLoad()
-      else {
-        img.addEventListener("load", onLoad)
-        img.addEventListener("error", onLoad)
-      }
-    }
-
-    // Fade out the loader when done
-    function finishLoading() {
-      gsap.to(wrapperRef.current, { 
-        opacity: 0, duration: 0.6, ease: "power3.inOut",
-        onComplete: () => setVisible(false),
+    const timer = setTimeout(() => {
+      gsap.to(wrapperRef.current, {
+        opacity: 0,
+        duration: 1.0,
+        ease: "power3.inOut",
+        onComplete: () => {
+          setVisible(false)
+          if (onFinish) onFinish()
+        },
       })
-    }
-  }, [])
+    }, 1000) //manual load duration
+
+    return () => clearTimeout(timer)
+  }, [1000, onFinish])
 
   if (!visible) return null
 
