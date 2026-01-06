@@ -11,15 +11,12 @@ const PageTransition = ({ children }) => {
     gsap.fromTo(
       containerRef.current,
       { opacity: 0 },
-      { opacity: 1,
-        duration: 0.5,
-        ease: "power2.in",
-      }
+      { opacity: 1, duration: 0.5, ease: "power2.in",}
     )
   }, [location.pathname]) // happens when page changes
 
   return (
-    <div ref={containerRef} className="min-h-screen">
+    <div ref={containerRef}>
       {children}
     </div>
   )

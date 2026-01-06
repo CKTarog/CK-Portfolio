@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import WordReveal from '../Animations/PerWordReveal';
 import ButtonGroup from './ButtonGroup';
 import ProjectCarousel from './swiperCarousel';
 
@@ -72,9 +73,9 @@ const SoloData = [
 ]
 
 const Projects = () => {
-    const [preview, setPreview] = useState('group'); //manipulates if shows group data or solo data
+    const [preview, setPreview] = useState('group'); //manipulates if shows group data or solo data, managed by group and solo buttons
     const [activeProject, setActiveProject] = useState(null); //manipulate the project that was selected
-    const [activeID, getID] = useState(0); //gets the id from carousel to track which is the current active item, for updating the description
+    const [activeID, getID] = useState(0); //gets the id from carousel to track which is the current active item, this is or updating the description
 
     const currentProject = preview === "group" ? GroupData : SoloData;
 
@@ -99,7 +100,9 @@ const Projects = () => {
                 {/*Guide visible only when in medium screens below*/}
                 <p className='lg:hidden visible text-sm opacity-50 p-2'>Click the projects to view more details</p>
                 <h1 className='font-bold self-end text-3xl pb-2 '>Description</h1>
-                <p className='self-end md:text-lg text-normal dark:text-[#d2b48c] text-[#733a3d]'>{getProjDesc.desc}</p>
+                
+                <p className='self-end md:text-lg text-normal dark:text-[#d2b48c] text-[#733a3d]'><WordReveal>{getProjDesc.desc}</WordReveal></p>
+                
             </div>
             
             {/*Project Carousel and Details*/}
