@@ -26,7 +26,7 @@ const WordReveal = ({ children }) => {
   return (
     <span ref={ref}>
       {typeof children === "string" && children.split(" ").map((word, i) => (
-          <span key={i}  data-word style={{ willChange: "transform, opacity" }}>
+          <span key={i} data-word style={{ willChange: "transform, opacity" }}>
             {word}
             {/* Preserve natural spacing */}
             {i !== children.split(" ").length - 1 && " "}

@@ -16,7 +16,7 @@ const MainAbout = () => {
                     </div>
                 </div>
                 <div className="row-start-2 m-5 h-30 w-30 place-content-center contain-content rounded-2xl">
-                    <img className="scale-120 -mt-2" src="./SHS_GradPic.JPG"/>
+                    <img className="scale-120 -mt-2" src="./SHS_GradPic.jpg"/>
                 </div>
             </section>
             <section className="pl-4 transition-all lg:pl-10">

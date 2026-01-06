@@ -15,7 +15,7 @@ const Desc = ({scrollToSection}) =>{
             {/*Own Info*/}
             <div className='p-4 py-4 m-4 space-y-3 dark:text-[#fff1dc] text-[#270E12] font-bold text-center content-center lg:w-200 md:w-130 h-70 w-auto'>
                 <h1 className='lg:text-7xl md:text-6xl text-4xl'>Charisse Keira Tarog</h1>
-                <p className='dark:text-[#d2b48c] text-[#733a3d] lg:text-4xl text-2xl transition-all duration-400 '><WordReveal>Diligent Student capable of being a front-end and back-end developer.</WordReveal></p>
+                <p className='dark:text-[#d2b48c] text-[#733a3d] lg:text-2xl text-xl transition-all duration-400 '><WordReveal>Diligent student capable of being a front-end and more so a back-end developer.</WordReveal></p>
                 
                 {/*who i am (breadcrumbs are what they're called right?)*/}
                 <Breadcrumbs/>

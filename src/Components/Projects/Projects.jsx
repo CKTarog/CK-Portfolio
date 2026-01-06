@@ -101,7 +101,7 @@ const Projects = () => {
                 <p className='lg:hidden visible text-sm opacity-50 p-2'>Click the projects to view more details</p>
                 <h1 className='font-bold self-end text-3xl pb-2 '>Description</h1>
                 
-                <p className='self-end md:text-lg text-normal dark:text-[#d2b48c] text-[#733a3d]'><WordReveal>{getProjDesc.desc}</WordReveal></p>
+                <p className='self-end md:text-lg text-normal dark:text-[#d2b48c] text-[#733a3d]'>{getProjDesc.desc}</p>
                 
             </div>
             

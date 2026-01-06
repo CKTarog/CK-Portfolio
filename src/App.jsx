@@ -19,13 +19,12 @@ function App() {
 
   return (
     <HashRouter>
-      
       <Theme>
         {!loading && <PageLoader onFinish={() => LoadDone(true)} />}
-
           <Routes>
             <Route element={<NavbarOutlet scrollToSection={scrollToSection} />}>
-              <Route path="/" element={<PageTransition>
+              <Route path="/" element={<PageTransition> {/*fade in page*/}
+
                   {/*main content is in a snapping scroll*/}
                   <div className="snap-always overflow-scroll snap-mandatory snap-y h-dvh no-scrollbar m-0 p-0">
                       <Desc scrollToSection={scrollToSection}/>
@@ -35,7 +34,7 @@ function App() {
                   </div>
                   </PageTransition>}/>
             </Route>
-            <Route path="/about" element={<PageTransition><AboutMe /></PageTransition>} />
+            <Route path="/about" element={<PageTransition><AboutMe /></PageTransition>} /> {/*fade in page*/}
           </Routes>
       </Theme>
     </HashRouter>
