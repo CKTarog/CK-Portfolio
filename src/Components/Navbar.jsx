@@ -48,13 +48,14 @@ const Navbar = ({children, scrollToSection}) => {
                 <button onClick={() => scrollToSection("projects")}>Projects</button>
                 <Link to="/about">About Me</Link>
             </div>
+
                 <button onClick={() => setNav((prev) => !prev)} 
                 onKeyDown={(e) => {
                     if (e.key === "ArrowRight") setNav(false);
                     if (e.key === "ArrowLeft") setNav(true);
                 }} 
-                className="md:hidden p-1 rounded-full outline lg:text-[#270E12]/30 text-[#270E12] dark:text-[#fff1dc]">
-                    {showNav ? <MdKeyboardArrowRight className="dark:bg-[#fff1dc] dark:text-[#270E12] dark:outline-[#270E12] bg-[#270E12] text-[#fff1dc] rounded-full"/> : <MdKeyboardArrowLeft />}
+                className="md:hidden">
+                    {showNav ? <MdKeyboardArrowRight className="p-1 dark:bg-[#fff1dc] dark:text-[#270E12] dark:outline-[#270E12] bg-[#270E12] text-[#fff1dc] rounded-full"/> : <MdKeyboardArrowLeft className="p-1 rounded-full outline text-[#270E12] dark:text-[#fff1dc]"/>}
                 </button>
             </div>
         </nav>
