@@ -2,6 +2,7 @@ import './App.css'
 import { Routes, Route } from "react-router-dom";
 import { NavbarOutlet, Theme} from './Components';
 import { Desc, Skills, Projects, ContactPage, AboutMe} from './Components';
+import { PageTransition } from './Components';
 import { HashRouter } from "react-router-dom";
 
 function App() {
@@ -17,16 +18,17 @@ function App() {
       <Theme>
           <Routes>
             <Route element={<NavbarOutlet scrollToSection={scrollToSection} />}>
-              <Route path="/" element={
-                  //main content is in a snapping scroll
+              <Route path="/" element={<PageTransition>
+                  {/*main content is in a snapping scroll*/}
                   <div className="snap-always overflow-scroll snap-mandatory snap-y h-dvh no-scrollbar m-0 p-0">
                     <Desc scrollToSection={scrollToSection}/>
                     <Skills id="skills" />
                     <Projects id="projects" />
                     <ContactPage id="contact" />
-                  </div>}/>
+                  </div>
+                  </PageTransition>}/>
             </Route>
-            <Route path="/about" element={<AboutMe />} />
+            <Route path="/about" element={<PageTransition><AboutMe /></PageTransition>} />
           </Routes>
       </Theme>
     </HashRouter>

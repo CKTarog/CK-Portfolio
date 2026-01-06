@@ -1,6 +1,8 @@
 //motion stuff
 export {default as RevealLinks} from './Motions/FlipLink';
 export { default as MouseTrail } from './General/MouseTrail';
+//animation stuff
+export { default as PageTransition} from './Animations/PageTransition';
 
 //General Stuff
 export { default as NavbarOutlet } from './Navbar';
